@@ -24,7 +24,7 @@ Terms used:
 
 4. The OtherNet will be a network of Nodes connected to each other over an abstracted meta-net overlaying the Internet.
 
-    a) OtherNet newtork packages will be layered, with TCP/IP protocol consisting of the outer layer, an SSH layer for security, and lastly the OtherNet protocol.
+    a) OtherNet newtork packets will be layered, with TCP/IP protocol consisting of the outer layer, an SSH layer for security, and lastly the OtherNet protocol.
 
     b) The nodes of the OtherNet will have a 1-to-1 mapping of the OtherNet addresses and their Internet IP address.
 
