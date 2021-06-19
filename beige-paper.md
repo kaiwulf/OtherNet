@@ -16,7 +16,7 @@ Terms used:
  
     b) "Harm" and "Violence" are defined as destruction to a person, their reputation or property.
  
-    c) Actions which do not constitute as "Harm" (in an actionable way) or "Violence" include: offensiveness, insensitivity, being perceived as not being inclusive, etc. Social norms rewarding people to be decent will be assumed to be adequate to handle undesirable behavior.
+    c) Actions which do not constitute as "Harm" (in an actionable way) or "Violence" include: offensiveness, insensitivity, being perceived as not being inclusive, etc. Social norms rewarding people for being decent will be assumed to be adequate to handle undesirable behavior.
  
     d) Political speech which has been banned by governments but doesn't do harm or violence in the senses mentioned above will be protected, so as to live up to the spirit of protecting free expression and resisting oppressive regimes.
  
