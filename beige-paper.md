@@ -1,14 +1,12 @@
 "OtherNet" is a placeholder for a new internet paradigm. It will serve as a space for netizens to return to the norms of the traditional internet, before special interests, e-commerce and social media fundamentally transformed the norms of the internet. It does not seek to be a replacement for the existing internet but a compliment.
 
-Explicit rules need to be laid out to maintain the traditional internet norms of the OtherNet, to push back against outside influences and special interests from controlling what others can do.
+To maintain an ecosystem that fosters the values of the OtherNet, rules will be necessary to curate the process of growth of the OtherNet. This is by no means difinitive. I wrote this in the spur of the moment while high on coffee.
 
 Terms used:
 
     OtherNet: A placeholder name for a new concept of internet freedom. The OtherNet is a new network protocol to create a space for free expression minded, thoughtful people to communicate, innovate and freely share knowledge and wisom.
     OtherWeb: The Web for the OtherNet written in Manic Text Hypertext Language (MTHL).
     Internet: The traditional internet. This includes the world wide web, the physical network of the internet, its servers, routers, etc.
-
-To maintain an ecosystem that fosters the values of the OtherNet, rules will be necessary to curate the process of growth of the OtherNet:
 
 1. All e-commerce will be banned.
 2. Free server space for homepages will be mandatory, provided by non-profit nodes who volunteer their resources for this project. Buying your own server space is allowed and optional.
