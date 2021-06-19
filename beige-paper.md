@@ -1,4 +1,4 @@
-"OtherNet" is a placeholder for a new internet paradigm. It will serve as a space for netizens to return to the traditional internet, before special interests, e-commerce and social media fundamentally transformed the norms of the internet. It does not seek to be a replacement for the existing internet but a compliment.
+"OtherNet" is a placeholder for a new internet paradigm. It will serve as a space for netizens to return to the norms of the traditional internet, before special interests, e-commerce and social media fundamentally transformed the norms of the internet. It does not seek to be a replacement for the existing internet but a compliment.
 
 Explicit rules need to be laid out to maintain the traditional internet norms of the OtherNet, to push back against outside influences and special interests from controlling what others can do.
 
