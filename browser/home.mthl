@@ -1,0 +1,58 @@
+// Define a page
+page "My First MTHL Page" begin <|
+    // Variables
+    title: "Welcome to MTHL" const;
+    colors: ["#FF0000", "#00FF00", "#0000FF"] const;
+    
+    // Layout containers
+    container begin <|
+        position(0, 0, 100%, 100%);
+        
+        // Header section
+        container begin <|
+            position(0, 0, 100%, 10%);
+            background(colors[0]);
+            
+            text begin <|
+                content(title);
+                font("Arial", 24, "bold");
+                color("#FFFFFF");
+                align("center");
+            end text |>
+        end container |>
+        
+        // Content section
+        container begin <|
+            position(0, 10%, 100%, 80%);
+            background("#FFFFFF");
+            
+            // Conditional rendering
+            if (title.length > 10) begin <|
+                text begin <|
+                    content("That's a long title!");
+                    position(10, 10, 80%, 20);
+                end text |>
+            end if|>
+            
+            // Loop example
+            var y = 50;
+            for (i: 0 var; i < colors.length; i++) begin <|
+                rectangle begin <|
+                    position(20%, y, 60%, 30);
+                    fill(colors[i]);
+                    y = y + 40;
+                end rectangle |>
+            end for |>
+            
+            // Event handling
+            button begin  <|
+                content("Click me");
+                position(40%, 200, 20%, 30);
+                onclick <|
+                    title = "Button clicked!";
+                    redraw();
+                |>
+            |>
+        |>
+    |>
+|>

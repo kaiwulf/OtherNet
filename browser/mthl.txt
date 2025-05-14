@@ -1,0 +1,8 @@
+mthl - manic text hyperlink language
+
+mthl will consist of these categories:
+	1) elements 	- they create the widget which displays information and/or the user interacts with
+	2) properties	- the properties decorate the elements with styles
+	3) control		- keywords which manages the control flow of the language
+	4) containers	- these are the variables and constants which hold value for use within the mthl file
+
