@@ -1,0 +1,101 @@
+services:
+  # Bootstrap node - the first node in the network
+    bootstrap:
+      build: .
+      container_name: p2p_bootstrap
+      networks:
+        p2p-network:
+          ipv4_address: 172.20.0.5
+      environment:
+        - NODE_IP=172.20.0.5
+        - NODE_TYPE=BOOTSTRAP
+        - LISTEN_PORT=8080
+      ports:
+        - "8079:59888"
+  node1:
+    build: .
+    container_name: p2p_node1
+    hostname: node1
+    networks:
+      p2p_network:
+        ipv4_address: 172.20.0.10
+    environment:
+      - NODE_ID=1
+      - NODE_IP=172.20.0.10
+      - LISTEN_PORT=59888
+      - PEER_ADDRESSES=172.20.0.11:59889,172.20.0.12:59890,172.20.0.13:59891
+    ports:
+      - "8081:59888"
+    stdin_open: true
+    tty: true
+
+  # Second node - connects to bootstrap
+  node2:
+    build: .
+    container_name: p2p_node2
+    hostname: node2
+    networks:
+      p2p_network:
+        ipv4_address: 172.20.0.11
+    environment:
+      - NODE_ID=2
+      - NODE_IP=172.20.0.11
+      - LISTEN_PORT=59889
+      - PEER_ADDRESSES=172.10.10:59888,172.20.0.12:59890,172.20.0.13:59891
+    ports:
+      - "8082:59888"
+    stdin_open: true
+    tty: true
+    command: ["./p2p_node", "172.20.0.10", "59888"]
+    depends_on:
+      - node1
+
+  # Third node - connects to bootstrap
+  node3:
+    build: .
+    container_name: p2p_node3
+    hostname: node3
+    networks:
+      p2p_network:
+        ipv4_address: 172.20.0.12
+    environment:
+      - NODE_ID=3
+      - NODE_IP=172.20.0.12
+      - LISTEN_PORT=59890
+      - PEER_ADDRESSES=172.10.10:59888,172.20.0.11:59889,172.20.0.13:59891
+    ports:
+      - "8083:59888"
+    stdin_open: true
+    tty: true
+    command: ["./p2p_node", "172.20.0.10", "59888"]
+    depends_on:
+      - node1
+
+  # Fourth node - connects to second node to test discovery
+  node4:
+    build: .
+    container_name: p2p_node4
+    hostname: node4
+    networks:
+      p2p_network:
+        ipv4_address: 172.20.0.13
+    environment:
+      - NODE_ID=4
+      - NODE_IP=172.20.0.13
+      - LISTEN_PORT=59891
+      - PEER_ADDRESSES=172.10.10:59888,172.20.0.11:59889,172.20.0.12:59890
+    ports:
+      - "8084:59888"
+    stdin_open: true
+    tty: true
+    command: ["./p2p_node", "172.20.0.11", "59888"]
+    depends_on:
+      - node2
+
+networks:
+  p2p_network:
+    external: true
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
